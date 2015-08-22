@@ -1,23 +1,23 @@
 Getting and Cleaning Data Codebook
 
 ## Data Source
-*Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-*Description: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+* Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+* Description: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ## Files Provided
-*Main 561-feature vector with time and frequency domain variables<br />
-  *’train/X_train.txt': Training set.<br />
-  *’test/X_test.txt': Test set.<br />
-*Activity labels.<br />
-  *’train/y_train.txt': Training labels.<br />
-  *’test/y_test.txt': Test labels.<br />
-*An identifier of the subject who carried out the experiment.<br />
-  *’train/subject_train.txt': Each row identifies the subject who performed the activity.<br />
-  *’test/subject_test.txt'<br />
-*List of all features.<br />
-  *’features.txt'<br />
-*Links the class labels with their activity name.<br />
-  *’activity_labels.txt'<br />
+1. Main 561-feature vector with time and frequency domain variables
+  * ’train/X_train.txt': Training set.
+  * ’test/X_test.txt': Test set.
+2. Activity labels
+  * ’train/y_train.txt': Training labels.
+  * ’test/y_test.txt': Test labels.
+3. An identifier of the subject who carried out the experiment.
+  * ’train/subject_train.txt': Each row identifies the subject who performed the activity.
+  * ’test/subject_test.txt'
+4. List of all features.
+  * ’features.txt'
+5. Links the class labels with their activity name.
+  * ’activity_labels.txt'>
 
 ## Variables
 There are basically 66 columns, consisting of 2 variable labels: subject and activities, and the rest are measurement features.
@@ -45,7 +45,7 @@ These signals were used to estimate variables of the feature vector for each pat
   * "Acc" stands for "Accelerometer"
   * ”Gyro" stands for "Gyroscope"
   * ”Mag" stands for "Magnitude"
-  * "BodyBody" is redundant, better to replace it by "Body"
+  * "BodyBody" is redundant, better to replace it by "Body"<br />
 5.a. Use aggregation to extract the requested data,combining third column until the end, and group by the subData$subject and subData$activity, and apply mean function.<br />
 5.b. Use the write.table to make a .txt file from the data extracted from 5.a.<br />
 
