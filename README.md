@@ -23,7 +23,8 @@ The number below is the objective. The alphabet shows the steps needed to achiev
 3.a. Importing the labels from "activity_labels.txt" <br />
 3.b. Generating the name of the activities from the 2nd column of the subData created from 2.b.
 3.c. Renaming the 2nd column of the subData with 3.b.<br />
-4.a. Learning from the instruction on the data set. Rename any acronyms in the variable, and make it detailed. e.g. “t” is renamed into “time”.<br />
+4.a. Learning from the instruction on the data set. Rename any acronyms in the variable, and make it detailed. e.g. “t” is renamed into “time”. <br />
+
 5.a. Use aggregation to extract the requested data.<br />
 5.b. Use the write.table to make a .txt file from the data extracted from 5.a.<br />
 
