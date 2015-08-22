@@ -37,7 +37,7 @@ These signals were used to estimate variables of the feature vector for each pat
 3. Selecting the mean and standard deviation subset, by using grep.
 4. Extracting only the requested measurement, producing a new subData.
 5. Importing the activity labels from "activity_labels.txt”, namely actLabels.
-6. Generating the name of the activities from the 2nd column of the subData created from step 4
+6. Generating the name of the activities from the 2nd column of the subData created from step 4.
 7. Renaming the 2nd column of the subData with step 6.
 8. Learning from the instruction on the data set. Rename any abbreviation in the variable using sub()
   * ”t” as prefix, stands for "time"
@@ -46,8 +46,8 @@ These signals were used to estimate variables of the feature vector for each pat
   * ”Gyro" stands for "Gyroscope"
   * ”Mag" stands for "Magnitude"
   * "BodyBody" is redundant, better to replace it by "Body"
-9. Use aggregation to extract the requested data,combining third column until the end, and group by the subData$subject and subData$activity, and apply mean function.
-10. Use the write.table to make a .txt file from the data extracted from 5.a.
+9. Use aggregation to extract the requested data, combining third column until the end, and group by the subData$subject and subData$activity, and apply mean function.
+10. Use the write.table to make a .txt file from the data extracted from step 9.
 
 ## Result
 The result is a TidyData.txt, combination of subject and activity, followed with the mean and standard deviation of all variables.

@@ -15,17 +15,16 @@ The project has 5 (five) main objectives:<br />
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 ##How it Works
-The number below is the objective. The alphabet shows the steps needed to achieve the objective.<br />
-1.a. Importing the data from the source on the Internet<br />
-1.b. Study the instruction of the file to understand more about the scattered data, then merge the data.<br />
-2.a. Selecting the mean and standard deviation subset. <br />
-2.b. Extracting only the requested measurement. <br />
-3.a. Importing the labels from "activity_labels.txt" <br />
-3.b. Generating the name of the activities from the 2nd column of the subData created from 2.b.
-3.c. Renaming the 2nd column of the subData with 3.b.<br />
-4.a. Learning from the instruction on the data set. Rename any acronyms in the variable, and make it detailed. e.g. “t” is renamed into “time”.<br />
-5.a. Use aggregation to extract the requested data.<br />
-5.b. Use the write.table to make a .txt file from the data extracted from 5.a.<br />
+1. Importing the data from the source on the Internet.
+2. Study the instruction of the file to understand more about the scattered data, then merge the data. For each test and train is rbind()-ed. Then, among the x, y, and subject, all are cbind()-ed.
+3. Selecting the mean and standard deviation subset, by using grep.
+4. Extracting only the requested measurement, producing a new subData.
+5. Importing the activity labels from "activity_labels.txt”, namely actLabels.
+6. Generating the name of the activities from the 2nd column of the subData created from step 4.
+7. Renaming the 2nd column of the subData with step 6.
+8. Learning from the instruction on the data set. Rename any abbreviation in the variable using sub().
+9. Use aggregation to extract the requested data, combining third column until the end, and group by the subData$subject and subData$activity, and apply mean function.
+10. Use the write.table to make a .txt file from the data extracted from step 9.
 
 ##Library Needed
 This script needs data.table package, already in the script
