@@ -5,19 +5,19 @@ Getting and Cleaning Data Codebook
 *Description: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ## Files Provided
-*Main 561-feature vector with time and frequency domain variables
-  *’train/X_train.txt': Training set.
-  *’test/X_test.txt': Test set.
-*Activity labels.
-  *’train/y_train.txt': Training labels.
-  *’test/y_test.txt': Test labels.
-*An identifier of the subject who carried out the experiment.
-  *’train/subject_train.txt': Each row identifies the subject who performed the activity
-  *’test/subject_test.txt'
-*List of all features.
-  *’features.txt'
-*Links the class labels with their activity name.
-  *’activity_labels.txt'
+*Main 561-feature vector with time and frequency domain variables<br />
+  *’train/X_train.txt': Training set.<br />
+  *’test/X_test.txt': Test set.<br />
+*Activity labels.<br />
+  *’train/y_train.txt': Training labels.<br />
+  *’test/y_test.txt': Test labels.<br />
+*An identifier of the subject who carried out the experiment.<br />
+  *’train/subject_train.txt': Each row identifies the subject who performed the activity.<br />
+  *’test/subject_test.txt'<br />
+*List of all features.<br />
+  *’features.txt'<br />
+*Links the class labels with their activity name.<br />
+  *’activity_labels.txt'<br />
 
 ## Variables
 There are basically 66 columns, consisting of 2 variable labels: subject and activities, and the rest are measurement features.
@@ -32,22 +32,22 @@ These signals were used to estimate variables of the feature vector for each pat
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 ## Works to Clean up Data
-1.a. Importing the data from the source on the Internet
-1.b. Study the instruction of the file to understand more about the scattered data, then merge the data. For each test and train is rbind()-ed. Then, among the x, y, and subject, all are cbind()-ed
-2.a. Selecting the mean and standard deviation subset, by using grep
-2.b. Extracting only the requested measurement, producing a new subData.
-3.a. Importing the activity labels from "activity_labels.txt”, namely actLabels.
-3.b. Generating the name of the activities from the 2nd column of the subData created from 2.b.
-3.c. Renaming the 2nd column of the subData with 3.b.
-4.a. Learning from the instruction on the data set. Rename any abbreviation in the variable using sub()
-  *”t” as prefix, stands for "time"
-  *”f” as prefix, stands for "frequency"
-  *"Acc" stands for "Accelerometer"
-  *”Gyro" stands for "Gyroscope"
-  *”Mag" stands for "Magnitude"
+1.a. Importing the data from the source on the Internet<br />
+1.b. Study the instruction of the file to understand more about the scattered data, then merge the data. For each test and train is rbind()-ed. Then, among the x, y, and subject, all are cbind()-ed<br />
+2.a. Selecting the mean and standard deviation subset, by using grep.<br />
+2.b. Extracting only the requested measurement, producing a new subData.<br />
+3.a. Importing the activity labels from "activity_labels.txt”, namely actLabels.<br />
+3.b. Generating the name of the activities from the 2nd column of the subData created from 2.b.<br />
+3.c. Renaming the 2nd column of the subData with 3.b.<br />
+4.a. Learning from the instruction on the data set. Rename any abbreviation in the variable using sub()<br />
+  * ”t” as prefix, stands for "time"
+  * ”f” as prefix, stands for "frequency"
+  * "Acc" stands for "Accelerometer"
+  * ”Gyro" stands for "Gyroscope"
+  * ”Mag" stands for "Magnitude"
   * "BodyBody" is redundant, better to replace it by "Body"
-5.a. Use aggregation to extract the requested data,combining third column until the end, and group by the subData$subject and subData$activity, and apply mean function.
-5.b. Use the write.table to make a .txt file from the data extracted from 5.a.
+5.a. Use aggregation to extract the requested data,combining third column until the end, and group by the subData$subject and subData$activity, and apply mean function.<br />
+5.b. Use the write.table to make a .txt file from the data extracted from 5.a.<br />
 
 ## Result
 The result is a TidyData.txt, combination of subject and activity, followed with the mean and standard deviation of all variables.
@@ -56,13 +56,13 @@ The result is a TidyData.txt, combination of subject and activity, followed with
 There are 30 volunteers for the experiment within the age bracket of 19-48 years.
                                         
  [2] "activity"
-Each volunteer performed 6 different activities:
-	1 WALKING
-	2 WALKING_UPSTAIRS
-	3 WALKING_DOWNSTAIRS
-	4 SITTING
-	5 STANDING
-	6 LAYING
+Each volunteer performed 6 different activities:<br />
+	1 WALKING<br />
+	2 WALKING_UPSTAIRS<br />
+	3 WALKING_DOWNSTAIRS<br />
+	4 SITTING<br />
+	5 STANDING<br />
+	6 LAYING<br />
 
  [3] "timeBodyAccelerometer-mean()-X"                    
  [4] "timeBodyAccelerometer-mean()-Y"                    
